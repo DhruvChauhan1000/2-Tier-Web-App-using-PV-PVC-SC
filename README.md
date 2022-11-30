@@ -47,7 +47,8 @@ k describe pod <pod name that you get above>
 
 # Common Errors
 ```
-1. Data Not Persisting Due to mysql.sql original file consisitng the Database.
+1. Data Not Persisting 
+   Solution: Make sure there is no "DROP DATABASE IF" Line in your Original SQL Database file.
 2. PVC Not getting Bounded
    Solution: kubectl patch storageclass <storageclass name> -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
    This will make your StorageClass as Default
