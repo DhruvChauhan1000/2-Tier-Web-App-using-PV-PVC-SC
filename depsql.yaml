@@ -25,7 +25,7 @@ spec:
         name: sql-pod
         volumeMounts:
         - name: mysql-pvc
-          mountPath: /logs
+          mountPath: /var/lib/mysql
         env:
           - name: MYSQL_ROOT_PASSWORD
             value: "123"
